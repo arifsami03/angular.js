@@ -15,3 +15,20 @@ Example scenarios of multiple incompatible directives applied to the same elemen
 * Multiple directives publishing a controller under the same name.
 * Multiple directives declared with the `transclusion` option.
 * Multiple directives attempting to define a `template` or `templateURL`.
+
+OR
+This could be error in your <dir-pagination-controls> div like this
+<dir-pagination-controls
+    [max-size="5"]
+    [direction-links="true"]
+    [boundary-links="true"]
+                            >
+</dir-pagination-controls>
+
+change this to
+<dir-pagination-controls
+    max-size="5"
+    direction-links="true"
+    boundary-links="true"
+                          >
+</dir-pagination-controls>
